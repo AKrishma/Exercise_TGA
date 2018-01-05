@@ -1,0 +1,98 @@
+[
+  {
+    "_id": "5a41ea1a9c9dd605f76b2202",
+    "isActive": true,
+    "balance": "$1,022.78",
+    "picture": "http://placehold.it/32x32",
+    "name": "Bird Mack",
+    "company": "XERONK",
+    "email": "birdmack@xeronk.com",
+    "address": "351 Oxford Walk, Windsor, Oregon, 6904",
+    "tags": [
+      "id",
+      "aliqua",
+      "in",
+      "eu"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Rowe Walker"
+      },
+      {
+        "id": 1,
+        "name": "Rollins Jones"
+      },
+      {
+        "id": 2,
+        "name": "Flores Sutton"
+      }
+    ],
+    "greeting": "Hello, Bird Mack! You have 2 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "5a41ea1aba040471878a7e6c",
+    "isActive": false,
+    "balance": "$3,321.22",
+    "picture": "http://placehold.it/32x32",
+    "name": "Guerrero Coleman",
+    "company": "VITRICOMP",
+    "email": "guerrerocoleman@vitricomp.com",
+    "address": "364 Channel Avenue, Bethany, Hawaii, 4259",
+    "tags": [
+      "culpa",
+      "aute",
+      "ea",
+      "dolor"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Margery Evans"
+      },
+      {
+        "id": 1,
+        "name": "Langley Gillespie"
+      },
+      {
+        "id": 2,
+        "name": "Kristen Rice"
+      }
+    ],
+    "greeting": "Hello, Guerrero Coleman! You have 9 unread messages.",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "5a41ea1aa10ba7ed28dfb913",
+    "isActive": true,
+    "balance": "$1,111.71",
+    "picture": "http://placehold.it/32x32",
+    "name": "Luisa Robertson",
+    "company": "QUONATA",
+    "email": "luisarobertson@quonata.com",
+    "address": "602 Lorimer Street, Edgar, Delaware, 4994",
+    "tags": [
+      "labore",
+      "laborum",
+      "dolore",
+      "qui"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Kate Chase"
+      },
+      {
+        "id": 1,
+        "name": "Price Orr"
+      },
+      {
+        "id": 2,
+        "name": "Jennie Bryan"
+      }
+    ],
+    "greeting": "Hello, Luisa Robertson! You have 3 unread messages.",
+    "favoriteFruit": "banana"
+  }
+  ]
