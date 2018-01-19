@@ -16,40 +16,37 @@ const express = require('express'),
       jsonfileUpdate = function(req, res, next) {
         try {
           let filePath = 'user-data.json',
-          updatedObject;
+          updatedObject = "";
   
-          let data = fs.readFile(filePath, 'utf8', function (err) {
+           fs.readFile(filePath, function (err, data) {
               if(err) {
                   console.log('Error in reading '+ filePath+ ' file - ' + err);
               }
-            });
-              jsondata = JSON.parse(data);
+              let jsondata = JSON.parse(data);
                jsondata.forEach(function(item) {
-                 let currentObject = JSON.parse(item);
-                 let currentObjectLen = item.length;
-                 //item.size = currentObjectLen;
-                // currentObject.push(JSON.stringify('size : '+currentObjectLen));
-                 updatedObject += JSON.stringify(currentObject);
+                 let currentObjectLen = 0;
+                 for(key in item) {
+                    currentObjectLen += 1;
+                 }
+                 item.size = currentObjectLen
+                 updatedObject += JSON.stringify(item);
               });
-              fs.writeFile("results.json", JSON.stringify(updatedObject));
-          
-
-        /*   var jsonObj = fs.readFile('results.json');
-          jsonObj = JSON.parse(jsonObj);
-          var yamlData = yaml.stringify(jsonObj);
-      fs.writeFile('user-data.yaml', yamlData); */
-         // return res.send(updatedObject);
-         // next();
-      }
-      catch(ex) {
-          console.log('Some error in jsonfileUpdate code ' + ex);
-      }
-    },
+              fileConverter(updatedObject);
+            });
+          }
+          catch(ex) {
+            console.log('Some error in jsonfileUpdate code ' + ex);
+          }
+        }
 
     fileConverter = function(jsonObj) {
+      console.log('JSON OBJ: '+jsonObj);
       var yamlData = yaml.stringify(jsonObj);
-      fs.writeFile('user-data.yaml', yamlData, callback);
+      fs.writeFile('user-data.yaml', yamlData);
+      console.log('user-data.yaml file created');
   };
+
+
 // load (mount)  functions
 //router.use(requestTime);
 //router.use(myLogger);

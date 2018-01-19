@@ -32,7 +32,7 @@ type post {
   postid: ID,
   postedBy :  profile,
   message: String,
-  postTime : { type: Date }
+  postTime : { type: String }
 }
 `;
 /* var postType = buildSchema(`

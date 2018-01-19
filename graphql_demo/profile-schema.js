@@ -144,7 +144,7 @@ type profile {
   id: ID,
   nickName : String,
   age: Int,
-  joiningDate : { type: Date },
+  joiningDate : String,
   friends: [profile]
 }
 `;
