@@ -5,14 +5,14 @@ const express = require('express'),
       yaml = require('json2yaml'),
 
 //  function  definitions (can be moved under controller) 
-      myLogger = function (req, res, next) {
+     /*  myLogger = function (req, res, next) {
         console.log('LOGGED');
         next();
       },
       requestTime = function (req, res, next) {
         req.requestTime = Date.now()
         next()
-      },
+      }, */
       jsonfileUpdate = function(req, res, next) {
         try {
           let filePath = 'user-data.json',
@@ -39,8 +39,7 @@ const express = require('express'),
           }
         }
 
-    fileConverter = function(jsonObj) {
-      console.log('JSON OBJ: '+jsonObj);
+    fileConverter = function(jsonObj) {;
       var yamlData = yaml.stringify(jsonObj);
       fs.writeFile('user-data.yaml', yamlData);
       console.log('user-data.yaml file created');
@@ -51,9 +50,8 @@ const express = require('express'),
 //router.use(requestTime);
 //router.use(myLogger);
 router.use(jsonfileUpdate);
-router.use(fileConverter);
 
-router.use('/user/:id', function (req, res, next) {
+/* router.use('/user/:id', function (req, res, next) {
   console.log('Request URL:', req.originalUrl);
   console.log('ID:', req.params.id)
   next()
@@ -63,7 +61,7 @@ router.use('/user/:id', function (req, res, next) {
 });
 router.get('/user/:id', function (req, res, next) {
   res.end(req.param.id);
-});
+}); */
 
 // on root page, print hello world
 router.get('/', function (req, res) {
